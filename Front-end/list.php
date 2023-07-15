@@ -1,5 +1,13 @@
 <?php
 
+include "../Back-end/connect.php";
+
+function listD(){
+    global $db;
+    return $db->query("select * from Doctor");
+}
+    // Call the connection function
+    $D= listD();
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +60,7 @@
         <div class="row">
             <div class="col-lg-3 col-6">
                 <div id="logo">
-                    <a href="index.html" title="Findoctor"><img src="img/logo.png" alt="" width="163" height="36"></a>
+                    <a href="Index.html" title="Findoctor"><img src="img/logo.png" alt="" width="163" height="36"></a>
                 </div>
             </div>
             <nav class="col-lg-9 col-6">
@@ -73,10 +81,10 @@
                         <li class="submenu">
                             <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
                             <ul>
-                                <li><a href="listP.php">Working doctor register</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="listP.php">Patient list/a></li>
+                                <li><a href="Register.php">Register</a></li>
+                                <li><a href="aboutUs.html">About Us</a></li>
+                                <li><a href="contactUs.html">Contacts</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -112,22 +120,27 @@
         <div class="row">
             <div class="col-lg-7">
 
-                <div class="strip_list wow fadeIn">
-                    <a href="#0" class="wish_bt"></a>
-                    <figure>
-                        <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    <small>Pediatrician</small>
-                    <h3>Dr. Cornfield</h3>
-                    <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cuodo....</p>
-                    <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></span>
-                    <a href="badges.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-                    <ul>
-                        <li><a href="#0" onclick="onHtmlClick('Doctors', 0)" class="btn_listing">View on Map</a></li>
-                        <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" target="_blank">Directions</a></li>
-                        <li><a href="detail-page.html">Book now</a></li>
-                    </ul>
-                </div>
+                <?php
+                while ($res=$D->fetch()){
+                    ?>
+                    <div class="strip_list wow fadeIn">
+                        <a href="#0" class="wish_bt"></a>
+                        <figure>
+                            <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
+                        </figure>
+                        <small><?php echo $res['spc']?></small>
+                        <h3>Dr. <?php echo $res['nomD']?></h3>
+                        <p>I m a doctor specialist in  :<?php echo $res['spc']?></p>
+                        <a href="badges.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
+                        <ul>
+                            <li><a href="#0" onclick="onHtmlClick('Doctors', 0)" class="btn_listing">View on Map</a></li>
+                            <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" target="_blank">Directions</a></li>
+                            <li><a href="detail-page.html">Book now</a></li>
+                        </ul>
+                    </div>
+
+
+                <?php } ?>
                 <!-- /strip_list -->
 
 
