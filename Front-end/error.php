@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +25,6 @@
     <link href="css/vendors.css" rel="stylesheet">
     <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
 
-    <!-- SPECIFIC CSS -->
-    <link href="css/date_picker.css" rel="stylesheet">
-
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet">
 
@@ -47,7 +40,7 @@
 </div>
 <!-- End Preload -->
 
-<header class="static">
+<header class="header_sticky">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-6">
@@ -55,34 +48,7 @@
                     <a href="index.html" title="Findoctor"><img src="img/logo.png" alt="" width="163" height="36"></a>
                 </div>
             </div>
-            <nav class="col-lg-9 col-6">
-                <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
-                <ul id="top_access">
-                    <li id="user">
-                        <a href="#0">
-                            <figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>
-                            Jhon Smith
-                        </a>
-                    </li>
-                </ul>
-                <div class="main-menu">
-                    <ul>
-                        <li >
-                            <a href="#0" class="show-submenu">Home<i class="icon-down-open-mini"></i></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
-                            <ul>
-                                <li><a href="listP.php">Working doctor register</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /main-menu -->
-            </nav>
+
         </div>
     </div>
     <!-- container -->
@@ -90,13 +56,12 @@
 <!-- /Header -->
 
 <main>
-    <div id="results">
+    <div id="error_page">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4><strong>                          </strong>                              </h4>
-                </div>
-                <div class="col-md-6">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-7 col-lg-9">
+                    <h2>404 <i class="icon_error-triangle_alt"></i></h2>
+                    <p>We're sorry, but the page you were looking for doesn't exist.</p>
 
                 </div>
             </div>
@@ -104,45 +69,7 @@
         </div>
         <!-- /container -->
     </div>
-    <!-- /results -->
-
-    <!-- /filters -->
-
-    <div class="container margin_60_35">
-        <div class="row">
-            <div class="col-lg-7">
-
-                <div class="strip_list wow fadeIn">
-                    <a href="#0" class="wish_bt"></a>
-                    <figure>
-                        <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    <small>Pediatrician</small>
-                    <h3>Dr. Cornfield</h3>
-                    <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cuodo....</p>
-                    <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></span>
-                    <a href="badges.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-                    <ul>
-                        <li><a href="#0" onclick="onHtmlClick('Doctors', 0)" class="btn_listing">View on Map</a></li>
-                        <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" target="_blank">Directions</a></li>
-                        <li><a href="detail-page.html">Book now</a></li>
-                    </ul>
-                </div>
-                <!-- /strip_list -->
-
-
-            <!-- /col -->
-
-            <aside class="col-lg-5" id="sidebar">
-                <div id="map_listing" class="normal_list">
-                </div>
-            </aside>
-            <!-- /aside -->
-
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
+    <!-- /error_page -->
 </main>
 <!-- /main -->
 
@@ -218,11 +145,7 @@
 <script src="js/common_scripts.min.js"></script>
 <script src="js/functions.js"></script>
 
-<!-- SPECIFIC SCRIPTS -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="js/markerclusterer.js"></script>
-<script src="js/map_listing.js"></script>
-<script src="js/infobox.js"></script>
+
 
 </body>
 </html>

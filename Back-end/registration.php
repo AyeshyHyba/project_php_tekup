@@ -19,7 +19,7 @@ function addPatient($data) {
             $query = "INSERT INTO Patient VALUES ('', '$nom', '$pr', '$mail', '$pwd1')";
             $r = $db->exec($query);
             if ($r) {
-                header("Location: login.html");
+                header("Location: login.php");
             } else {
                 echo "<script>alert('Failed to add patient');</script>";
             }

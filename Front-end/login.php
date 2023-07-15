@@ -1,6 +1,4 @@
-<?php
-include("../Back-end/login1.php");
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +56,7 @@ include("../Back-end/login1.php");
             <li class="submenu">
               <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
               <ul>
-                <li><a href="RegisterDoctor.html">Register Doctor</a></li>
+                <li><a href="RegisterDoctor.php">Register Doctor</a></li>
                  <li><a href="Register.php">Register</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
                 <li><a href="contactUs.html">Contacts</a></li>
@@ -74,30 +72,31 @@ include("../Back-end/login1.php");
 </header>
 <!-- /header -->
 
-<main>
-  <div class="bg_color_2">
-    <div class="container margin_60_35">
-      <div id="login">
-        <h1>Please login to Findoctor!</h1>
-        <div class="box_form">
-          <form>
-            <div class="form-group">
-              <input type="email" class="form-control"  name="mail"  placeholder="Your email address">
+<main style="margin:100px 300px">
+    <div class="cta_subscribe">
+        <div class="container-fluid h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-md-6 p-0">
+                    <div class="block_1">
+                        <figure><img src="img/doctors_icon.svg" alt=""></figure>
+                        <h3>Are you a Doctor?</h3>
+                        <p>The service allows you to get maximum visibility online and to manage appointments and contacts coming from the site, in a simple and fast way.</p>
+                        <a href="loginDoc.php" class="btn_1">Login Doctor</a>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="block_2">
+                        <figure><img src="img/patient_icon.svg" alt=""></figure>
+                        <h3>Are you a patient?</h3>
+                        <p>Choosing a specialist has never been so fast! You can filter search results by location and medical specialization, and book medical examination online.</p>
+                        <a href="loginPat.php" class="btn_1">Login Patient</a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <input type="password" class="form-control"  placeholder="Your password" name="pwd" id="password">
-            </div>
-            <a href="#0"><small>Forgot password?</small></a>
-            <div class="form-group text-center add_top_20">
-              <input class="btn_1 medium" type="submit" value="Login">
-            </div>
-          </form>
+            <!-- /row -->
         </div>
-        <p class="text-center link_bright">Do not have an account yet? <a href="#0"><strong>Register now!</strong></a></p>
-      </div>
-      <!-- /login -->
+        <!-- /container -->
     </div>
-  </div>
 </main>
 
 <footer>

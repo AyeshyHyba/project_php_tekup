@@ -1,8 +1,8 @@
 <?php
-include("../Back-end/reset.php");
-if (isset($_POST['resetP'])) {
-    // Call the addPatient function
-    resetPwd($_POST);
+include("../Back-end/loginD.php");
+if (isset($_POST['login'])) {
+    // Call the connection function
+    connectionD($_POST);
 }
 ?>
 <!DOCTYPE html>
@@ -56,10 +56,11 @@ if (isset($_POST['resetP'])) {
                 </div>
             </div>
             <nav class="col-lg-9 col-6">
+                <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <div class="main-menu">
                     <ul>
                         <li class="submenu">
-                            <a  class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
+                            <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
                             <ul>
                                 <li><a href="RegisterDoctor.php">Register Doctor</a></li>
                                 <li><a href="Register.php">Register</a></li>
@@ -81,39 +82,22 @@ if (isset($_POST['resetP'])) {
     <div class="bg_color_2">
         <div class="container margin_60_35">
             <div id="login">
-                <h1>Please Reset your Password!</h1>
+                <h1>Hello Doc :) Please login! </h1>
                 <div class="box_form">
-                    <form method="post" >
+                    <form method="post">
                         <div class="form-group">
-                            <input type="email" class="form-control"  name="mail"  placeholder="Your mail">
+                            <input type="email" class="form-control"  name="mail"  placeholder="Your email address" >
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control"  id="pwd1" name="pwd1"  placeholder="Your new password">
+                            <input type="password" class="form-control"  placeholder="Your password" name="pwd" id="password">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control"  id="pwd2" placeholder="Confirm password" name="pwd2" id="password">
-                        </div>
-                        <div id="errorRegister" ></div>
-                        <script>
-                            document.querySelector('form').addEventListener('submit', function(event) {
-                                let pwd1 = document.getElementById('pwd1').value;
-                                let pwd2 = document.getElementById('pwd2').value;
-                                let error = document.getElementById('errorRegister');
-
-                                if (pwd1 !== pwd2) {
-                                    error.innerHTML = "Passwords does not match";
-                                    error.style.color = "red"; // Set the error message color to red
-                                    event.preventDefault(); // Prevent form submission
-                                } else {
-                                    error.innerHTML = ""; // Clear the error message
-                                }
-                            });
-                        </script>
+                        <a href="resetPassword.php"><small>Forgot password?</small></a>
                         <div class="form-group text-center add_top_20">
-                            <input class="btn_1 medium"  name="resetP" type="submit" value="reset Password">
+                            <input class="btn_1 medium"  name="login" type="submit" value="Login">
                         </div>
                     </form>
                 </div>
+                <p class="text-center link_bright">Do not have an account yet? <a href="RegisterDoctor.php"><strong>Register now!</strong></a></p>
             </div>
             <!-- /login -->
         </div>
@@ -125,7 +109,7 @@ if (isset($_POST['resetP'])) {
         <div class="row">
             <div class="col-lg-3 col-md-12">
                 <p>
-                    <a href="Index.html" title="Findoctor">
+                    <a href="index.html" title="Findoctor">
                         <img src="../img/logo.png" alt="" width="163" height="36" class="img-fluid">
                     </a>
                 </p>

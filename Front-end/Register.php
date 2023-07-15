@@ -65,7 +65,7 @@ if (isset($_POST['register'])) {
                         <li class="submenu">
                             <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
                             <ul>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="login.php">Login</a></li>
                                 <li><a href="../RegisterDoctor.html">Register Doctor</a></li>
                                 <li><a href="aboutUs.html">About Us</a></li>
                                 <li><a href="contactUs.html">Contacts</a></li>
@@ -118,7 +118,7 @@ if (isset($_POST['register'])) {
                                         let error = document.getElementById('errorRegister');
 
                                         if (pwd1 !== pwd2) {
-                                            error.innerHTML = "Passwords do not match";
+                                            error.innerHTML = "Passwords does not match";
                                             error.style.color = "red"; // Set the error message color to red
                                             event.preventDefault(); // Prevent form submission
                                         } else {
@@ -155,8 +155,8 @@ if (isset($_POST['register'])) {
                 <h5>About</h5>
                 <ul class="links">
                     <li><a href="aboutUs.html">About us</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="Register.php">Register</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4">
@@ -164,7 +164,7 @@ if (isset($_POST['register'])) {
                 <ul class="links">
                     <li><a href="#0">Doctors</a></li>
                     <li><a href="#0">Clinics</a></li>
-                    <li><a href="../RegisterDoctor.html">Join as a Doctor</a></li>
+                    <li><a href="RegisterDoctor.php">Join as a Doctor</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4">
