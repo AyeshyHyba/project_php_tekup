@@ -3,6 +3,7 @@
 include "../Back-end/connect.php";
 include "../Back-end/listD.php";
 include "../Back-end/acceuil.php";
+
 // function listD(){
 //     global $db;
 //     return $db->query("select * from Doctor");
@@ -136,7 +137,7 @@ include "../Back-end/acceuil.php";
                   </ul>
                 </li>
 
-                <li><a href="#0">LogOut</a></li>
+                <li ><a href="../Back-end/logOut.php" >LogOut</a></li>
               </ul>
             </div>
             <!-- /main-menu -->

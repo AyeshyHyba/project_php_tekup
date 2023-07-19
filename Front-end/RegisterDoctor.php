@@ -152,13 +152,33 @@ if (isset($_POST['registerD'])) {
                 </div>
               </div>
                   <div class="form-group">
-                      <label>Password</label>
+                   
                       <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Your password" required>
                   </div>
                   <div class="form-group">
-                      <label>Confirm password</label>
+               
                       <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Confirm password" required>
                   </div>
+                  <div class="form-group">
+                     
+                      <input type="text" class="form-control" id="descr" name="descr" placeholder="descreption" required>
+                  </div>
+                  <div class="form-group">
+                     
+                     <input type="text" class="form-control" id="photoD" name="photoD" placeholder="link photo" required>
+                 </div>
+                 <div class="row">
+                <div class="col-md-6 ">
+                  <div class="form-group">
+                    <input type="time" class="form-control" placeholder="time in" id="timeIn" name="timeIn" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="time" class="form-control" placeholder="time out" id="timeOut" name="timeOut" required>
+                  </div>
+                </div>
+              </div>
                   <div id="errorRegister" ></div>
                   <script>
                       document.querySelector('form').addEventListener('submit', function(event) {

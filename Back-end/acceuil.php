@@ -32,6 +32,7 @@ function userDocterData(){
     } else {
         // No users found in the database
         echo "No users found.";
+        return false;
     }
 
 
