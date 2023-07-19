@@ -6,7 +6,7 @@ function connectionP($data){
     $mail = $data['mail'];
     $pwd = $data['pwd'];
     if (isset($mail) && isset($pwd)) {
-        $res = $db->query("SELECT * FROM Patient WHERE mail='$mail' AND pwd='$pwd'");
+        $res = $db->query("SELECT * FROM Patient WHERE mailp='$mail' AND pwdp='$pwd'");
         if ($res->fetch()) {
             // Authentication successful
             header("Location:  ../Front-end/dashboard.php"); // Redirect to the dashboard page or any other authorized page
